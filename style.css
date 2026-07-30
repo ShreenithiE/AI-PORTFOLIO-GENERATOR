@@ -1,0 +1,124 @@
+:root {
+    --bg-pure-black: #111418;             /* Deep rich warm dark background */
+    --bg-surface: rgba(30, 34, 41, 0.75); /* Slate charcoal cards */
+    --text-white: #ffffff;
+    --text-muted: #94a3b8;
+    --cyan-glow: #f99f1b;                 /* Replaced with striking Amber Orange */
+    --teal-accent: #1c5353;               /* Deep Sea Teal secondary theme variant */
+    --border-cyan: rgba(28, 83, 83, 0.4); /* Grounded Teal borders instead of bright cyan */
+    --glass-bg: rgba(255, 255, 255, 0.02);
+}
+
+body {
+    background-color: var(--bg-pure-black);
+    color: var(--text-white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 20px;
+    overflow-x: hidden;
+}
+
+/* 🖱️ Updated Cursor Glow Rings using Amber-Teal gradients */
+.cursor-glow {
+    position: fixed; width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(249, 159, 27, 0.06) 0%, rgba(28, 83, 83, 0.04) 50%, transparent 70%);
+    pointer-events: none; transform: translate(-50%, -50%);
+    z-index: 9999; mix-blend-mode: screen;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+
+/* ⚡ Navbar with Hover Effects */
+.navbar { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px 0; margin-bottom: 40px; border-bottom: 1px solid var(--border-cyan);
+    animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.logo { font-size: 1.6rem; font-weight: 900; color: #fff; transition: transform 0.3s; text-decoration: none;}
+.logo span { color: var(--cyan-glow); text-shadow: 0 0 10px rgba(249, 159, 27, 0.5); }
+
+.sign-in-btn { 
+    background: transparent; border: 1px solid var(--cyan-glow); color: var(--cyan-glow); 
+    padding: 8px 20px; border-radius: 20px; cursor: pointer; font-weight: 600; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.sign-in-btn:hover { background: var(--cyan-glow); color: #000; box-shadow: 0 0 20px var(--cyan-glow); transform: translateY(-2px); }
+
+.hero-container { text-align: center; padding: 80px 0; }
+.hero-container h1 { font-size: 3.8rem; line-height: 1.1; margin-bottom: 24px; font-weight: 800; }
+.cyan-glow { color: var(--cyan-glow); text-shadow: 0 0 20px rgba(249, 159, 27, 0.4); }
+.hero-container p { color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto 36px auto; }
+
+.primary-cta-btn { 
+    background: var(--cyan-glow); color: #000; border: none; padding: 14px 32px; 
+    font-size: 1rem; font-weight: 800; border-radius: 30px; cursor: pointer; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 0 20px rgba(249, 159, 27, 0.2);
+}
+.primary-cta-btn:hover { transform: scale(1.02) translateY(-2px); box-shadow: 0 0 35px var(--cyan-glow); }
+
+/* 🌌 Advanced Slate-Charcoal Glassmorphism Cards */
+.form-card, #portfolio-output-view { 
+    background: var(--bg-surface); border: 1px solid var(--border-cyan); 
+    padding: 40px; border-radius: 16px; margin-bottom: 40px; backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+.form-card:hover {
+    border-color: var(--cyan-glow);
+    box-shadow: 0 0 30px rgba(249, 159, 27, 0.1);
+}
+
+.form-row { display: flex; gap: 20px; }
+.form-group { flex: 1; margin-bottom: 20px; display: flex; flex-direction: column; }
+label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+input { 
+    background: rgba(17, 20, 24, 0.6); border: 1px solid var(--border-cyan); 
+    padding: 14px; border-radius: 8px; color: #fff; font-size: 1rem; transition: all 0.3s ease;
+}
+input:focus { border-color: var(--cyan-glow); outline: none; box-shadow: 0 0 15px rgba(249, 159, 27, 0.2); }
+
+.skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.skill-chip { 
+    background: var(--glass-bg); border: 1px solid var(--border-cyan); color: #fff; 
+    padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s;
+}
+.skill-chip:hover { background: var(--teal-accent); border-color: var(--cyan-glow); transform: translateY(-2px); }
+
+/* 📁 Cybernetic Reveal Project Cards */
+.project-card { 
+    background: rgba(17, 20, 24, 0.4); border: 1px solid var(--border-cyan); 
+    padding: 24px; border-radius: 12px; margin-top: 15px; transition: all 0.3s ease;
+}
+.project-card:hover { transform: translateX(4px); border-color: var(--cyan-glow); }
+.headline { color: var(--cyan-glow); font-size: 1.25rem; font-weight: 600; margin-top: 4px; }
+hr { border: 0; border-top: 1px solid var(--border-cyan); margin: 30px 0; }
+#loader { text-align: center; color: var(--cyan-glow); font-weight: 700; margin-top: 15px; animation: pulse 1.5s infinite; }
+
+/* 🖥️ Micro-App Simulator Custom Teal Skins */
+.app-preview-container { margin-top: 20px; background: #000; border: 1px solid var(--teal-accent); border-radius: 12px; overflow: hidden; }
+.simulator-header { background: #1e2229; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border-cyan); }
+.sim-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.sim-dot.red { background: #ef4444; }
+.sim-dot.yellow { background: #f59e0b; }
+.sim-dot.green { background: #10b981; }
+.sim-address-bar { background: rgba(255, 255, 255, 0.05); color: var(--text-muted); font-size: 0.75rem; font-family: monospace; padding: 4px 14px; border-radius: 6px; flex: 1; margin-left: 10px; }
+.simulator-body { height: 240px; background: #111418; display: flex; align-items: center; justify-content: center; position: relative; }
+.simulator-iframe { width: 100%; height: 100%; border: none; }
+.sandbox-fallback-ui { text-align: center; padding: 20px; position: absolute; pointer-events: none; }
+
+/* 📄 ATS Clear Text Layer */
+.resume-printable { background: #ffffff; color: #000000; padding: 40px; border-radius: 8px; margin-top: 30px; display: block; }
+.ats-item { margin-bottom: 12px; color: #111; font-size: 0.95rem; }
+
+.hidden { display: none !important; opacity: 0; }
+.scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+.scroll-reveal.active { opacity: 1; transform: translateY(0); }
+
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+@media print {
+    body * { display: none !important; }
+    #ats-resume-print-box, #ats-resume-print-box * { display: block !important; background: transparent !important; color: #000000 !important; }
+    #ats-resume-print-box { position: absolute; left: 0; top: 0; width: 100%; padding: 0; margin: 0; }
+}
