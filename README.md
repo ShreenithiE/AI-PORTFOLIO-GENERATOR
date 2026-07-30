@@ -45,17 +45,9 @@ Asynchronous HTTP Client: Requests
 **📂 Project Structure**
 
 
-
-
-Plaintext
-├── app/
-│   ├── main.py         
-│   └── .env          
-
-├── static/
-│   └── index.html      
-├── requirements.txt     
-└── README.md           
+ 
+ **<img width="248" height="217" alt="image" src="https://github.com/user-attachments/assets/4654fcf4-4995-409c-9ce4-9ef0079daecb" />**
+ 
 **📹 Video Description
 
 
