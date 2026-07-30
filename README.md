@@ -62,13 +62,13 @@ https://github.com/user-attachments/assets/0c866a28-5218-4a0f-b55c-6e3f0aa969a5
 
 <img width="1788" height="820" alt="image" src="https://github.com/user-attachments/assets/b60eabab-84df-4bf8-9383-3e6303e66a43" />
 
-
-**Create and activate a virtual environment**
+**
+**Create and activate a virtual environment****
   -->python -m venv venv
   -->venv\Scripts\activate
 
   
-**Install the dependencies:**
+****Install the dependencies:****
   -->pip install -r requirements.txt
 
 **Set up your environment variables:**
