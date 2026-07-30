@@ -44,7 +44,7 @@ By analyzing real codebase distributions and parsing README files for media arti
 ├── requirements.txt     
 └── README.md           
 
- **VIDEO DESCRIPTION**
+ __VIDEO DESCRIPTION__
 
 
 https://github.com/user-attachments/assets/0c866a28-5218-4a0f-b55c-6e3f0aa969a5
